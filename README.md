@@ -1,5 +1,5 @@
 # LRU-cache
-##LRU cache - As cache can only hold a fixed number of things so in LRU we remove the least recently used item in the cache to make room for the new item.
+## LRU cache - As cache can only hold a fixed number of things so in LRU we remove the least recently used item in the cache to make room for the new item.
 
 ###### Data structure of LRU will consist of Hash for fast lookup and Doubly Linked List(DLL) for fast removal of least recently used item.
 Hash key's values will be nodes within the doubly linked list.
