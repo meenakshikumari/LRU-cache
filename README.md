@@ -7,11 +7,11 @@ In DLL the least recently used items will be head and most recently used will be
 
 ###### LRU class have two methods get() and set() which are defined as follows.
 **get(x)** : Gets the value of the key x if the key exists in the cache
-otherwise returns -1.__
+otherwise returns -1.\
 **set(x,y)** : Inserts the value if the key x is not already present. If the
 cache reaches its capacity it invalidate the least recently used
-item before inserting the new item.__
-In the constructor of the class the size of the cache is initialized.__
+item before inserting the new item.\
+In the constructor of the class the size of the cache is initialized.\
 
 Have attached the sample bit of code in solution.rb file; output of which will be:
 
