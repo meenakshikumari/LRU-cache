@@ -14,7 +14,8 @@ class Lru
 	def get(key)
 		result = @lookup_table[key]
 		return -1 unless result
-		return result.value if @tail == result # as result is tail itself; it is recently used item
+		 # if result is at tail itself then return value as it is recently used item
+		return result.value if @tail == result
 
 		if result.prev_node == nil
 			@head = result.next_node
@@ -33,13 +34,14 @@ class Lru
 
 	def set(key, val)
 		@current_size += 1
-		if @current_size > @max_size # remove least recent item (i.e. head)
-			@lookup_table.delete(@lookup_table.key(@head)) #remove from hash
+		# if current size exceeds, remove least recent item (i.e. head)
+		if @current_size > @max_size
+			@lookup_table.delete(@lookup_table.key(@head)) # remove least reacent key values pair from lookup table
 			@head = @head.next_node # then change the head of DLL
 			@head.prev_node = nil
 		end
 		new_node = Node.new(val, @tail, nil)
-		if @tail == nil # when new node is first element in the queue
+		if @tail == nil # when new node is very first element in the Dll
 			@head = new_node
 		else
 			@tail.next_node = new_node
