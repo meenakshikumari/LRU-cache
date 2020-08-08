@@ -11,7 +11,7 @@ otherwise returns -1.\
 **set(x,y)** : Inserts the value if the key x is not already present. If the
 cache reaches its capacity it invalidate the least recently used
 item before inserting the new item.\
-In the constructor of the class the size of the cache is initialized.\
+In the constructor of the class the size of the cache is initialized.
 
 Have attached the sample bit of code in solution.rb file; output of which will be:
 
